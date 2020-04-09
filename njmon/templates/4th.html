@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>njmon chart - selected host</title>
+        <style>
+            .no_border {border-style : none}
+        </style>
+    </head>
+    <body>
+        <form action="chart">
+            Host selected: <input type="text" name="host" value="{{host}}" class="no_border" readonly><br/>
+            Start Date: <input type="text" name="day" value="{{day}}" class="no_border" readonly />
+            <br/>
+            Start Time:
+            <select name=time>
+                {% for time in times %}
+                <option value= "{{time}}">{{time}}</option>"
+                {% endfor %}
+            </select>
+            <br/>
+            Duration: <input type="number" name="hours" value="1" min="1" max="100"/> hour(s)
+            <br>
+            Clear Cache <input type="checkbox" name="new">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>

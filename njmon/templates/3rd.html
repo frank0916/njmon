@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>njmon chart - selected host</title>
+        <style>
+            .no_border {border-style : none}
+        </style>
+    </head>
+    <body>
+        <form action="4th">
+            Host selected: <input type="text" name="host" value="{{host}}" class="no_border" readonly><br/>
+            Start Date:
+            <select name=day>
+                {% for day in days %}
+                <option value= "{{day}}">{{day}}</option>"
+                {% endfor %}
+            </select>
+            <br/>
+            <input type="submit" value="Submit">
+        </form>
+        {{month}}
+    </body>
+</html>
